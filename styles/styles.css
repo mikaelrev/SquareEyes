@@ -1,1 +1,30 @@
+/* Global Styles */
+body {
+  background-color: #f2efeb;
+}
 
+header {
+  background-color: #ffffff;
+  width: auto;
+}
+
+/* Home Page */
+.welcome-section h1 {
+  background-color: lightsteelblue;
+  color: #a60311;
+}
+.featured-movies {
+  background-color: lightgreen;
+}
+
+.featured-movies h1 {
+  color: #a60311;
+}
+
+.recommended-movies {
+  background-color: lightblue;
+}
+
+.recommended-movies h1 {
+  color: #a60311;
+}
