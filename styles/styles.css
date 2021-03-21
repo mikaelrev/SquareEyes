@@ -76,17 +76,18 @@ header input {
   font-size: 1.2em;
 }
 
+.right-nav {
+  display: flex;
+  flex-direction: row-reverse
+  width: 50%;
+  align-items: center;
+  margin-left: auto;
+}
+
 .right-nav li {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 1.2em;
-}
-
-.right-nav {
-  display: flex;
-  width: 50%;
-  align-items: center;
-  margin-left: auto;
 }
 
 .right-nav p {
@@ -133,14 +134,13 @@ a:link {
 }
 
 .welcome-wrapper {
-  display: block;
   position: relative;
+  text-align: center;
 }
 
 .welcome-section img {
   border-radius: 7px;
   width: 100%;
-  max-width: 1000px;
 }
 
 .welcome-info {
@@ -148,10 +148,9 @@ a:link {
   background: rgba(0, 0, 0, 0.5);
   width: 40%;
   padding: 36px;
-  z-index: 2;
   position: absolute;
-  bottom: 40px;
-  right: 40px;
+  bottom: 60px;
+  right: 100px;
   color: white;
 }
 
@@ -203,7 +202,7 @@ a:link {
 }
 
 .moviecard {
-  margin: 0px 20px 0px 20px;
+  margin: 0px 20px 40px 20px;
   width: 20%;
 }
 
