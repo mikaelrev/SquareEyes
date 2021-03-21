@@ -10,45 +10,47 @@
 </head>
 <body>
   <header>
-    <div>
-      <nav>
-        <ul class="main-nav">
-          <li class="logo"><a href="index.html"></a></li>
+      <nav class="main-nav">
+        <ul class="left-nav">
+          <li class="logo"><img src="images/SquareEyesLogo.png" alt="Square Eyes Logo"><a href="index.html"></a></li>
           <li><a href="index.html">Home</a></li>
           <li><a href="movies.html">Movies</a></li>
           <li><a href="coming-soon.html">Coming Soon</a></li>
-          <div class="right-nav">
-            <p>Search Movies</p>
-            <input type="text">
-            <a href="login.html">Login</a>
-            <p>or</p>
-            <a href="sign-up.html">Sign Up</a>
-          </div>
+        </ul>
+        <ul class="right-nav">
+          <li><input type="text" value="Search"></li>
+          <li><a href="login.html">Login</a></li>
+          <li class="or-button"><p>or</p></li>
+          <li><a href="sign-up.html">Sign Up</a></li>
         </ul>
       </nav>
-    </div>
   </header>
   <main>
     <section class="welcome-section">
-      <h1>Welcome</h1>
-      <img src="/images/welcome-small.jpg" alt="Man using camera">
+      <div class="welcome-wrapper">
+        <div class="welcome-info">
+          <h2>Lorem</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi beatae dolorem voluptatibus?</p>
+        </div>
+        <img src="/images/welcome-small.jpg" alt="Man using camera">
+      </div>
     </section>
     <section class="featured-movies">
       <h1>Featured Movies</h1>
       <div>
-        <figure>
+        <figure class="moviecard">
           <img src="images/movie-thumbnail-small.jpg" alt="Movie Thumbnail">
           <figcaption><a href="Movie Title">Movie Title</a></figcaption>
         </figure>
-        <figure>
+        <figure class="moviecard">
           <img src="images/movie-thumbnail-small.jpg" alt="Movie Thumbnail">
           <figcaption><a href="Movie Title">Movie Title</a></figcaption>
         </figure>
-        <figure>
+        <figure class="moviecard">
           <img src="images/movie-thumbnail-small.jpg" alt="Movie Thumbnail">
           <figcaption><a href="Movie Title">Movie Title</a></figcaption>
         </figure>
-        <figure>
+        <figure class="moviecard">
           <img src="images/movie-thumbnail-small.jpg" alt="Movie Thumbnail">
           <figcaption><a href="Movie Title">Movie Title</a></figcaption>
         </figure>
@@ -57,19 +59,19 @@
     <section class="recommended-movies">
       <h1>Recommended Movies</h1>
       <div>
-        <figure>
+        <figure class="moviecard">
           <img src="images/movie-thumbnail-small.jpg" alt="Movie Thumbnail">
           <figcaption><a href="Movie Title">Movie Title</a></figcaption>
         </figure>
-        <figure>
+        <figure class="moviecard">
           <img src="images/movie-thumbnail-small.jpg" alt="Movie Thumbnail">
           <figcaption><a href="Movie Title">Movie Title</a></figcaption>
         </figure>
-        <figure>
+        <figure class="moviecard">
           <img src="images/movie-thumbnail-small.jpg" alt="Movie Thumbnail">
           <figcaption><a href="Movie Title">Movie Title</a></figcaption>
         </figure>
-        <figure>
+        <figure class="moviecard">
           <img src="images/movie-thumbnail-small.jpg" alt="Movie Thumbnail">
           <figcaption><a href="Movie Title">Movie Title</a></figcaption>
         </figure>
@@ -83,9 +85,6 @@
       <p>address</p>
       <p>telephone</p>
     </div>
-    
   </footer>
-  
-  
 </body>
 </html>
