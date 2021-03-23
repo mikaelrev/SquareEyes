@@ -4,8 +4,10 @@
   font-family: "Roboto", sans-serif;
 }
 
-body {
+body,
+html {
   background-color: #f2efeb;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -53,7 +55,6 @@ header input {
 
 .logo img {
   max-width: 170px;
-  padding: 0px;
   margin: 10px 10px 0px 50px;
 }
 
@@ -80,7 +81,6 @@ header input {
   flex-direction: row;
   width: 50%;
   align-items: center;
-  margin-left: auto;
 }
 
 .right-nav li {
@@ -127,25 +127,26 @@ a:link {
 
 /* Home Page */
 .welcome-section {
-  display: block;
   background-color: #f2efeb;
 }
-
-.welcome-container {
-  position: relative;
+.welcome-section h1 {
+  margin-top: 50px;
 }
-
-.welcome-section img {
-  border-radius: 7px;
-  width: 100%;
+.welcome-container {
+  background-image: url(../images/welcome.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  position: relative;
 }
 
 .welcome-info {
   font-family: "Roboto", sans-serif;
   background: rgba(0, 0, 0, 0.5);
   width: 40%;
-  padding: 36px;
   position: absolute;
+  padding: 36px;
   bottom: 60px;
   right: 100px;
   color: white;
@@ -163,8 +164,8 @@ a:link {
 .welcome-section h1 {
   font-family: "Archivo", sans-serif;
   color: #a60311;
-  padding: 0px;
-  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-size: 2em;
 }
 
 .featured-movies,
@@ -192,6 +193,7 @@ a:link {
   color: #a60311;
   font-size: 2em;
   width: 100%;
+  margin: 60px 0px 10px 0px;
 }
 
 .featured-movies img,
@@ -238,10 +240,10 @@ a:link {
   }
 
   .welcome-info {
-    padding: 10px 60px;
+    padding: 10px 10px;
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 60px;
+    right: 100px;
   }
 
   .welcome-info p {
@@ -271,7 +273,7 @@ a:link {
     width: 100%;
     text-align: center;
     justify-content: center;
-    padding: 16px 24px 16px 24px;
+    padding: 10px 0px;
   }
 
   .featured-movies h1,
@@ -280,9 +282,8 @@ a:link {
   }
 
   .welcome-info {
-    padding: 5px 50px;
     position: absolute;
-    bottom: 5px;
-    right: 5px;
+    bottom: 50px;
+    right: 10px;
   }
 }
