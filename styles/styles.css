@@ -117,12 +117,12 @@ a:hover {
   color: #1d5982;
 }
 
-a:active {
-  color: #1d5982;
+a:link {
+  color: black;
 }
 
-a:link {
-  color: #000000;
+.active {
+  text-decoration: underline;
 }
 
 /* Home Page */
@@ -214,6 +214,40 @@ a:link {
   width: 20%;
 }
 
+/* Movies Page */
+.movie-library h1 {
+  font-family: "Archivo", sans-serif;
+  color: #a60311;
+  font-size: 2em;
+  width: 100%;
+  margin: 60px 0px 10px 0px;
+}
+
+/* Coming Soon Page */
+.coming-soon-library h1 {
+  font-family: "Archivo", sans-serif;
+  color: #a60311;
+  font-size: 2em;
+  width: 100%;
+  margin: 60px 0px 10px 0px;
+}
+
+/* Login Page */
+.login h1 {
+  font-family: "Archivo", sans-serif;
+  color: #a60311;
+  font-size: 2em;
+  width: 100%;
+  margin: 60px 0px 10px 0px;
+}
+/* Sign Up Page */
+.sign-up h1 {
+  font-family: "Archivo", sans-serif;
+  color: #a60311;
+  font-size: 2em;
+  width: 100%;
+  margin: 60px 0px 10px 0px;
+}
 /* Media Queries */
 @media screen and (max-width: 1000px) {
   .moviecard {
