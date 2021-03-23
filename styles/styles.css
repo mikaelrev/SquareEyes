@@ -98,6 +98,10 @@ header input {
   padding: 12px;
 }
 
+.main-nav a {
+  color: black;
+}
+
 footer {
   background: #ffffff;
   font-family: "Roboto", sans-serif;
@@ -115,10 +119,6 @@ footer {
 
 a:hover {
   color: #1d5982;
-}
-
-a:link {
-  color: black;
 }
 
 .active {
