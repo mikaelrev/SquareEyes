@@ -130,7 +130,7 @@ a:hover {
   margin-top: 50px;
 }
 .welcome-container {
-  background-image: url(../images/welcome.jpg);
+  background-image: url(../images/welcome-small.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
