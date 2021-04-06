@@ -135,9 +135,8 @@ a:hover {
 .norwegian-movies {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  max-width: 1500px;
-  margin: auto;
-  gap: 20px;
+  width: 80%;
+  gap: 30px;
 }
 
 .featured-movies h2,
@@ -157,6 +156,7 @@ a:hover {
 .norwegian-movies img {
   border-radius: 7px;
   width: 100%;
+  margin-top: 0px;
 }
 
 .featured-movies a,
