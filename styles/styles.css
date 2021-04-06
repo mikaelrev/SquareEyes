@@ -4,9 +4,19 @@
 body,
 html {
   background-color: #f2efeb;
+  font-family: "Roboto", sans-serif;
+  color: #a60311;
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  font-family: "Archivo", sans-serif;
+  color: #a60311;
+  font-size: 2em;
+  width: 100%;
+  margin: 60px 0px 10px 0px;
 }
 
 main {
@@ -63,12 +73,11 @@ header input {
   display: flex;
   width: 50%;
   align-items: center;
-  font-family: "Roboto", sans-serif;
+
   font-weight: 400;
 }
 
 .left-nav a {
-  font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 1.2em;
 }
@@ -81,12 +90,12 @@ header input {
 }
 
 .right-nav li {
-  font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 1.2em;
 }
 
 .right-nav p {
+  color: #000;
   font-size: 0.9em;
   font-weight: 400;
 }
@@ -101,7 +110,7 @@ a {
 
 footer {
   background: #ffffff;
-  font-family: "Roboto", sans-serif;
+  color: #000;
   font-size: 1em;
   margin-top: 50px;
   padding: 15px;
@@ -111,7 +120,6 @@ footer {
 .contact p {
   display: inline-block;
   padding-right: 20px;
-  font-family: "Roboto", sans-serif;
 }
 
 a:hover {
@@ -122,13 +130,54 @@ a:hover {
   text-decoration: underline;
 }
 
+.featured-movies,
+.recommended-movies,
+.new-movies,
+.popular-movies,
+.norwegian-movies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1500px;
+  margin: auto;
+  gap: 20px;
+}
+
+.featured-movies h2,
+.recommended-movies h2,
+.new-movies h2,
+.popular-movies h2,
+.norwegian-movies h2 {
+  grid-column: -1/1;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+.featured-movies img,
+.recommended-movies img,
+.new-movies img,
+.popular-movies img,
+.norwegian-movies img {
+  border-radius: 7px;
+  width: 100%;
+}
+
+.featured-movies a,
+.recommended-movies a,
+.new-movies a,
+.popular-movies a,
+.norwegian-movies a {
+  text-decoration: none;
+}
+
 /* Home Page */
 .welcome-section {
   background-color: #f2efeb;
 }
+
 .welcome-section h1 {
   margin-top: 50px;
 }
+
 .welcome-container {
   background-image: url(../images/welcome-small.jpg);
   background-size: cover;
@@ -139,7 +188,6 @@ a:hover {
 }
 
 .welcome-info {
-  font-family: "Roboto", sans-serif;
   background: rgba(0, 0, 0, 0.5);
   width: 40%;
   position: absolute;
@@ -159,166 +207,39 @@ a:hover {
 }
 
 .welcome-section h1 {
-  font-family: "Archivo", sans-serif;
-  color: #a60311;
   margin-bottom: 10px;
   font-size: 2em;
 }
 
-.featured-movies,
-.recommended-movies {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.featured-movies a,
-.recommended-movies a {
-  text-decoration: none;
-}
-
-.featured-movies div,
-.recommended-movies div {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.featured-movies h1,
-.recommended-movies h1 {
-  font-family: "Archivo", sans-serif;
-  color: #a60311;
-  font-size: 2em;
-  width: 100%;
-  margin: 60px 0px 10px 0px;
-}
-
-.featured-movies img,
-.recommended-movies img {
-  border-radius: 7px;
-  max-width: 100%;
-}
-
-.featured-movies figcaption,
-.recommended-movies figcaption {
-  padding: 10px 0px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-}
-
-.moviecard {
-  margin: 0px 40px 0px 0px;
-  width: 20%;
-}
-
 /* Movies Page */
-.movie-library h1 {
-  font-family: "Archivo", sans-serif;
-  color: #a60311;
-  font-size: 2em;
-  width: 100%;
-  margin: 60px 0px 10px 0px;
-}
 
 /* Coming Soon Page */
-.coming-soon-library h1 {
-  font-family: "Archivo", sans-serif;
-  color: #a60311;
-  font-size: 2em;
-  width: 100%;
-  margin: 60px 0px 10px 0px;
-}
 
 /* Login Page */
-.login h1 {
-  font-family: "Archivo", sans-serif;
-  color: #a60311;
-  font-size: 2em;
-  width: 100%;
-  margin: 60px 0px 10px 0px;
-}
+
 /* Sign Up Page */
-.sign-up h1 {
-  font-family: "Archivo", sans-serif;
-  color: #a60311;
-  font-size: 2em;
-  width: 100%;
-  margin: 60px 0px 10px 0px;
+.sign-up_form {
+  max-width: 1000px;
+  margin: auto;
 }
+
+.sign-up_form p {
+  margin-bottom: 0px;
+}
+
+input {
+  width: 350px;
+}
+
+.radio-button {
+  margin: 30px 0px;
+}
+
+.radio-button label {
+  margin-right: 30px;
+}
+
 /* Media Queries */
-@media screen and (max-width: 1000px) {
-  .moviecard {
-    width: 40%;
-    margin-bottom: 30px;
-  }
+/* @media screen and (max-width: 1000px)  */
 
-  .main-nav {
-    flex-direction: column;
-  }
-
-  .left-nav,
-  .right-nav {
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-  }
-
-  .left-nav > *,
-  .right-nav > * {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .welcome-info {
-    padding: 10px 10px;
-    position: absolute;
-    bottom: 60px;
-    right: 100px;
-  }
-
-  .welcome-info p {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .moviecard {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-
-  .main-nav {
-    flex-direction: column;
-  }
-
-  .left-nav,
-  .right-nav {
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .left-nav > *,
-  .right-nav > * {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    padding: 10px 0px;
-  }
-
-  .or-button {
-    display: none;
-  }
-
-  .featured-movies h1,
-  .recommended-movies h1 {
-    font-size: 1.5em;
-  }
-
-  .welcome-info {
-    position: absolute;
-    bottom: 50px;
-    right: 10px;
-  }
-}
+/* @media screen and (max-width: 500px)  */
