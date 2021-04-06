@@ -54,6 +54,8 @@ header .logo a {
 header input {
   border: 1px solid black;
   border-radius: 7px;
+  width: 200px;
+  padding: 8px;
 }
 
 .logo {
@@ -98,10 +100,6 @@ header input {
   color: #000;
   font-size: 0.9em;
   font-weight: 400;
-}
-
-.right-nav input {
-  padding: 12px;
 }
 
 a {
@@ -223,12 +221,16 @@ a:hover {
   margin: auto;
 }
 
-.sign-up_form p {
-  margin-bottom: 0px;
+.sign-up_form h1 {
+  margin-bottom: 50px;
 }
 
-input {
+.sign-up_form_info input {
   width: 350px;
+}
+
+.sign-up_form p {
+  margin-bottom: 0px;
 }
 
 .radio-button {
@@ -237,6 +239,14 @@ input {
 
 .radio-button label {
   margin-right: 30px;
+}
+
+.cta {
+  border-radius: 5px;
+  background-color: #f2a516;
+  color: #000;
+  padding: 10px 30px;
+  border: 0px solid;
 }
 
 /* Media Queries */
