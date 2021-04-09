@@ -20,7 +20,7 @@ h1 {
 }
 
 main {
-  margin: 0px 60px;
+  padding: 0px 60px;
 }
 
 header {
@@ -41,15 +41,14 @@ header ul {
 }
 
 header li {
-  display: inline-flex;
+  display: flex;
   padding: 20px;
-  margin: 0px;
 }
 
 header input {
   border: 1px solid black;
   border-radius: 5px;
-  width: 200px;
+  width: fit-content;
   padding: 8px;
 }
 
@@ -70,13 +69,12 @@ header input {
 .left-nav,
 .right-nav {
   display: flex;
-  width: 50%;
   align-items: center;
+  width: 50%;
 }
 
 .right-nav {
   justify-content: flex-end;
-  margin-right: 30px;
 }
 
 .right-nav li,
@@ -101,8 +99,9 @@ footer {
   color: #000;
   font-size: 1em;
   margin-top: 50px;
-  padding: 15px;
+  padding: 30px 0px;
   text-align: center;
+  width: 100%;
 }
 
 .contact p {
@@ -118,6 +117,11 @@ a:hover {
   color: #1d5982;
 }
 
+img {
+  border-radius: 5px;
+  margin-top: 0px;
+}
+
 .featured-movies,
 .recommended-movies,
 .new-movies,
@@ -129,6 +133,14 @@ a:hover {
   gap: 30px;
 }
 
+.featured-movies img,
+.recommended-movies img,
+.new-movies img,
+.popular-movies img,
+.norwegian-movies img {
+  width: 100%;
+}
+
 .featured-movies h2,
 .recommended-movies h2,
 .new-movies h2,
@@ -137,11 +149,6 @@ a:hover {
   grid-column: -1/1;
   margin-top: 50px;
   margin-bottom: 0px;
-}
-
-img {
-  border-radius: 5px;
-  margin-top: 0px;
 }
 
 .featured-movies a,
@@ -155,6 +162,7 @@ img {
 /* Home Page */
 .welcome-section {
   background-color: #f2efeb;
+  width: 100%;
 }
 
 .welcome-container {
@@ -183,6 +191,10 @@ img {
   padding: 5px 20px;
   border-radius: 5px;
   text-decoration: none;
+}
+
+.recommended-movies {
+  margin-bottom: 150px;
 }
 
 /* Coming Soon Page */
@@ -281,19 +293,57 @@ img {
 }
 
 /* Media Queries */
-@media screen and (max-width: 1000px) {
-  .main-nav {
-    display: grid;
-    grid-template-rows: 2;
-  }
-
-  .left-nav {
-    grid-row: 1;
-  }
-
-  .right-nav {
-    grid-row: 2;
-  }
+@media (max-width: 1024px) {
+.main-nav{
+  align-items: center;
 }
 
-/* @media screen and (max-width: 500px)  */
+.left-nav,
+.right-nav {
+  width: 100%;
+}
+
+.or-button {
+  display: none;
+}
+
+.mobile {
+  display: none;
+}
+
+.featured-movies,
+.recommended-movies,
+.new-movies,
+.popular-movies,
+.norwegian-movies {
+  width: 100%;
+}
+
+@media (max-width: 850px) {
+  .main-nav {
+    flex-direction: column;
+  }
+
+  .left-nav,
+  .right-nav {
+    flex-direction: column;
+    width: 100%;
+
+  }
+
+  .left-nav > *,
+  .right-nav > * {
+    padding: 7px;
+  }
+
+  .featured-movies,
+  .recommended-movies,
+  .new-movies,
+  .popular-movies,
+  .norwegian-movies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+  
+}
