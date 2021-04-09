@@ -48,7 +48,7 @@ header li {
 
 header input {
   border: 1px solid black;
-  border-radius: 7px;
+  border-radius: 5px;
   width: 200px;
   padding: 8px;
 }
@@ -139,13 +139,8 @@ a:hover {
   margin-bottom: 0px;
 }
 
-.featured-movies img,
-.recommended-movies img,
-.new-movies img,
-.popular-movies img,
-.norwegian-movies img {
-  border-radius: 7px;
-  width: 100%;
+img {
+  border-radius: 5px;
   margin-top: 0px;
 }
 
@@ -222,9 +217,28 @@ a:hover {
 }
 
 .folders {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   max-width: 1000px;
-  margin: auto;
+  margin: 50px auto;
+  gap: 20px;
+}
+
+.uploads {
+  display: grid;
+  grid-column: 1;
+  gap: 10px;
+}
+
+.favorites {
+  display: grid;
+  grid-column: 2;
+  gap: 10px;
+}
+
+.folders img {
+  max-width: 150px;
+  max-height: 150px;
 }
 
 /* Sign Up Page */
@@ -240,8 +254,8 @@ a:hover {
 .sign-up_form_info input {
   width: 350px;
   padding: 5px;
-  border-radius: 5px;
   border: 1px solid #b6b6b6;
+  border-radius: 3px;
 }
 
 .sign-up_form p {
@@ -267,6 +281,19 @@ a:hover {
 }
 
 /* Media Queries */
-/* @media screen and (max-width: 1000px)  */
+@media screen and (max-width: 1000px) {
+  .main-nav {
+    display: grid;
+    grid-template-rows: 2;
+  }
+
+  .left-nav {
+    grid-row: 1;
+  }
+
+  .right-nav {
+    grid-row: 2;
+  }
+}
 
 /* @media screen and (max-width: 500px)  */
