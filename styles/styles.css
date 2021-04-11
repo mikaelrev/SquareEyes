@@ -181,14 +181,14 @@ img {
 
 .cta-red {
   background-color: #a60311;
-  color: white;
+  color: #fff;
   padding: 5px 20px;
   border-radius: 5px;
   text-decoration: none;
 }
 
 .cta-red:hover {
-  background-color: white;
+  background-color: transparent;
   color: #a60311;
   border: solid #a60311;
 }
@@ -307,7 +307,7 @@ img {
 }
 
 .cta:hover {
-  background-color: white;
+  background-color: #f2efeb;
   color: #000;
   border: solid #f2a516;
 }
@@ -331,11 +331,7 @@ img {
   display: none;
 }
 
-.featured-movies,
-.recommended-movies,
-.new-movies,
-.popular-movies,
-.norwegian-movies {
+.movies {
   width: 100%;
 }
 
@@ -356,18 +352,14 @@ img {
     padding: 7px;
   }
 
-  .featured-movies,
-  .recommended-movies,
-  .new-movies,
-  .popular-movies,
-  .norwegian-movies {
+  .movies {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
   }
   
   .account-links ul {
-    display:flex;
+    display: flex;
     flex-direction: column;
   }
   
