@@ -223,11 +223,15 @@ img {
 }
 
 /* Account Page */
-.account-links {
-  padding: 0px;
+.account-page {
   max-width: 1000px;
   margin: auto;
 }
+
+.account-links {
+  padding: 0px;
+}
+
 .account-links ul {
   padding: 0px;
   display: flex;
@@ -253,7 +257,6 @@ img {
 
 .folders {
   display: flex;
-  max-width: 1000px;
   margin: 50px auto;
   gap: 20px;
 }
@@ -283,10 +286,6 @@ img {
 .sign-up_form {
   max-width: 1000px;
   margin: auto;
-}
-
-.sign-up_form h1 {
-  margin-bottom: 50px;
 }
 
 .sign-up_form_info input {
@@ -391,9 +390,6 @@ img {
     }
 
     /* Account Page */
-    .account-page h1 {
-      margin-bottom: 20px;
-    }
     .account-links ul {
       display: flex;
       flex-direction: column;
