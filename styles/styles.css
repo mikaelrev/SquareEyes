@@ -19,6 +19,10 @@ h1 {
   margin: 60px 0px 10px 0px;
 }
 
+p {
+  color: #000;
+}
+
 main {
   padding: 0px 60px;
 }
@@ -122,41 +126,27 @@ img {
   margin-top: 0px;
 }
 
-.featured-movies,
-.recommended-movies,
-.new-movies,
-.popular-movies,
-.norwegian-movies {
+.movies {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 80%;
   gap: 30px;
 }
 
-.featured-movies img,
-.recommended-movies img,
-.new-movies img,
-.popular-movies img,
-.norwegian-movies img {
+.movies img {
   width: 100%;
 }
 
-.featured-movies h2,
-.recommended-movies h2,
-.new-movies h2,
-.popular-movies h2,
-.norwegian-movies h2 {
+.movies h2 {
   grid-column: -1/1;
   margin-top: 50px;
   margin-bottom: 0px;
 }
 
-.featured-movies a,
-.recommended-movies a,
-.new-movies a,
-.popular-movies a,
-.norwegian-movies a {
+.movies a {
   text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 /* Home Page */
@@ -185,7 +175,11 @@ img {
   border-radius: 5px;
 }
 
-.welcome-info a {
+.welcome-info p {
+  color: #fff;
+}
+
+.cta-red {
   background-color: #a60311;
   color: white;
   padding: 5px 20px;
@@ -193,11 +187,32 @@ img {
   text-decoration: none;
 }
 
+.cta-red:hover {
+  background-color: white;
+  color: #a60311;
+  border: solid #a60311;
+}
+
 .recommended-movies {
   margin-bottom: 150px;
 }
 
-/* Coming Soon Page */
+/* Movie-Title Page */
+.title-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.about-info {
+  width: 400px;
+}
+
+.play-movie {
+  background-color: #C7C5C2;
+  width: 450px;
+  height: 250px;
+}
 
 /* Account Page */
 .account-links {
@@ -272,7 +287,6 @@ img {
 
 .sign-up_form p {
   margin-bottom: 0px;
-  color: #000;
 }
 
 .radio-button {
@@ -290,6 +304,12 @@ img {
   color: #000;
   padding: 10px 30px;
   border: 0px solid;
+}
+
+.cta:hover {
+  background-color: white;
+  color: #000;
+  border: solid #f2a516;
 }
 
 /* Media Queries */
@@ -346,4 +366,12 @@ img {
     width: 100%;
   }
   
+  .account-links ul {
+    display:flex;
+    flex-direction: column;
+  }
+  
+  .account-links li {
+    margin: 0px;
+  }
 }
