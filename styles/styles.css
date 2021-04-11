@@ -25,6 +25,7 @@ p {
 
 main {
   padding: 0px 60px;
+  max-width: 1000px;
 }
 
 header {
@@ -68,6 +69,7 @@ header input {
 .main-nav {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .left-nav,
@@ -133,7 +135,12 @@ img {
   gap: 30px;
 }
 
-.movies img {
+.moviecard {
+  display: flex;
+  flex-direction: column;
+}
+
+.moviecard img {
   width: 100%;
 }
 
@@ -168,11 +175,15 @@ img {
   background: rgba(0, 0, 0, 0.5);
   width: 40%;
   position: absolute;
-  padding: 36px;
-  bottom: 60px;
-  right: 100px;
+  padding: 20px;
+  bottom: 20px;
+  right: 20px;
   color: white;
   border-radius: 5px;
+}
+
+.welcome-info h2 {
+  margin: 0px;
 }
 
 .welcome-info p {
@@ -182,6 +193,7 @@ img {
 .cta-red {
   background-color: #a60311;
   color: #fff;
+  font-size: 0.8em;
   padding: 5px 20px;
   border-radius: 5px;
   text-decoration: none;
@@ -191,10 +203,6 @@ img {
   background-color: transparent;
   color: #a60311;
   border: solid #a60311;
-}
-
-.recommended-movies {
-  margin-bottom: 150px;
 }
 
 /* Movie-Title Page */
@@ -209,7 +217,7 @@ img {
 }
 
 .play-movie {
-  background-color: #C7C5C2;
+  background-color: #c7c5c2;
   width: 450px;
   height: 250px;
 }
@@ -314,28 +322,32 @@ img {
 
 /* Media Queries */
 @media (max-width: 1024px) {
-.main-nav{
-  align-items: center;
-}
+  .main-nav {
+    align-items: center;
+  }
 
-.left-nav,
-.right-nav {
-  width: 100%;
-}
+  .left-nav {
+    width: 70%;
+  }
+  
+  .right-nav {
+    width: 30%;
+  }
 
-.or-button {
-  display: none;
-}
+  .or-button {
+    display: none;
+  }
 
-.mobile {
-  display: none;
-}
+  .mobile {
+    display: none;
+  }
 
-.movies {
-  width: 100%;
-}
+  .movies {
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+  }
 
-@media (max-width: 850px) {
+  @media (max-width: 800px) {
   .main-nav {
     flex-direction: column;
   }
@@ -344,7 +356,6 @@ img {
   .right-nav {
     flex-direction: column;
     width: 100%;
-
   }
 
   .left-nav > *,
@@ -354,16 +365,39 @@ img {
 
   .movies {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     width: 100%;
+    justify-items: left;
   }
-  
+
   .account-links ul {
     display: flex;
     flex-direction: column;
   }
-  
+
   .account-links li {
     margin: 0px;
+  }
+  .movie-page {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .play-movie {
+    width: 100%;
+  }
+
+  .movie-details {
+    order: 2;
+  }
+
+  .about-info {
+    width: 100%;
+    order: 1;
   }
 }
