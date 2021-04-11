@@ -252,11 +252,14 @@ img {
 }
 
 .folders {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: flex;
   max-width: 1000px;
   margin: 50px auto;
   gap: 20px;
+}
+
+.folders img {
+  width: 100%;
 }
 
 .uploads {
@@ -329,7 +332,7 @@ img {
   .left-nav {
     width: 70%;
   }
-  
+
   .right-nav {
     width: 30%;
   }
@@ -348,56 +351,84 @@ img {
   }
 
   @media (max-width: 800px) {
-  .main-nav {
-    flex-direction: column;
+    .main-nav {
+      flex-direction: column;
+    }
+
+    .left-nav,
+    .right-nav {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .left-nav > *,
+    .right-nav > * {
+      padding: 7px;
+    }
+
+    .movies {
+      width: 100%;
+      justify-items: left;
+    }
+
+    /* Movie Title Page */
+    .movie-page, .title-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .play-movie {
+      width: 100%;
+    }
+
+    .movie-details {
+      order: 2;
+    }
+
+    .about-info {
+      width: 100%;
+      order: 1;
+    }
+
+    /* Account Page */
+    .account-page h1 {
+      margin-bottom: 20px;
+    }
+    .account-links ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .account-links li {
+      margin: 0px;
+    }
+
+    .account-page {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .account {
+      margin: 0px;
+    }
+
+    .account-info {
+      order: 1;
+    }
+
+    .account-links {
+      margin: 0px;
+      order: 2;
+    }
+
+    .folders {
+      margin: 0px;
+      order: 3;
+    }
   }
 
-  .left-nav,
-  .right-nav {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .left-nav > *,
-  .right-nav > * {
-    padding: 7px;
-  }
-
+@media screen and (max-width: 450px) {
   .movies {
-    display: grid;
     grid-template-columns: 1fr;
-    width: 100%;
-    justify-items: left;
-  }
-
-  .account-links ul {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .account-links li {
-    margin: 0px;
-  }
-  .movie-page {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .title-info {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .play-movie {
-    width: 100%;
-  }
-
-  .movie-details {
-    order: 2;
-  }
-
-  .about-info {
-    width: 100%;
-    order: 1;
   }
 }
