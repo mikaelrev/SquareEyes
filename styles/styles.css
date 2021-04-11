@@ -25,7 +25,7 @@ p {
 
 main {
   padding: 0px 60px;
-  max-width: 1000px;
+  max-width: 1350px;
 }
 
 header {
@@ -347,7 +347,7 @@ img {
 
   .movies {
     grid-template-columns: 1fr 1fr;
-    width: 80%;
+    width: 70%;
   }
 
   @media (max-width: 800px) {
