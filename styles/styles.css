@@ -197,16 +197,17 @@ img {
 .cta-red {
   background-color: #a60311;
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding: 5px 20px;
   border-radius: 5px;
   text-decoration: none;
 }
 
 .cta-red:hover {
-  background-color: transparent;
-  color: #a60311;
+  color: white;
   border: solid #a60311;
+  padding: 7px 22px;
+  font-size: 1.2rem;
 }
 
 /* Movie-Title Page */
