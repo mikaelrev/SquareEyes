@@ -348,82 +348,84 @@ img {
     width: 70%;
   }
 
-@media (max-width: 800px) {
-  .main-nav {
-    flex-direction: column;
+  @media (max-width: 800px) {
+    .main-nav {
+      flex-direction: column;
+    }
+
+    .left-nav,
+    .right-nav {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .left-nav > *,
+    .right-nav > * {
+      padding: 7px;
+    }
+
+    .movies {
+      width: 100%;
+      justify-items: left;
+    }
+
+    /* Movie Title Page */
+    .movie-page,
+    .title-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .play-movie {
+      width: 100%;
+    }
+
+    .movie-details {
+      order: 2;
+    }
+
+    .about-info {
+      width: 100%;
+      order: 1;
+    }
+
+    /* Account Page */
+    .account-links ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .account-links li {
+      margin: 0px;
+    }
+
+    .account-page {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .account {
+      margin: 0px;
+    }
+
+    .account-info {
+      order: 1;
+    }
+
+    .account-links {
+      margin: 0px;
+      order: 2;
+    }
+
+    .folders {
+      margin: 0px;
+      order: 3;
+    }
   }
 
-  .left-nav,
-  .right-nav {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .left-nav > *,
-  .right-nav > * {
-    padding: 7px;
-  }
-
-  .movies {
-    width: 100%;
-    justify-items: left;
-  }
-
-/* Movie Title Page */
-  .movie-page, .title-info {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .play-movie {
-    width: 100%;
-  }
-
-  .movie-details {
-    order: 2;
-  }
-
-  .about-info {
-    width: 100%;
-    order: 1;
-  }
-
-/* Account Page */
-  .account-links ul {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .account-links li {
-    margin: 0px;
-  }
-
-  .account-page {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .account {
-    margin: 0px;
-  }
-
-  .account-info {
-    order: 1;
-  }
-
-  .account-links {
-    margin: 0px;
-    order: 2;
-  }
-
-  .folders {
-    margin: 0px;
-    order: 3;
-  }
-}
-
-@media screen and (max-width: 450px) {  
-  .movies {
-    grid-template-columns: 1fr;
+  @media screen and (max-width: 450px) {
+    .movies {
+      grid-template-columns: 1fr;
+    }
   }
 }
