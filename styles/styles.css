@@ -422,7 +422,7 @@ img {
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 450px) {  
   .movies {
     grid-template-columns: 1fr;
   }
