@@ -14,7 +14,7 @@ html {
 h1 {
   font-family: "Archivo", sans-serif;
   color: #a60311;
-  font-size: 2em;
+  font-size: 2rem;
   width: 100%;
   margin: 60px 0px 10px 0px;
 }
@@ -86,13 +86,17 @@ header input {
 .right-nav li,
 .left-nav a {
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 .right-nav p {
   color: #000;
-  font-size: 0.9em;
+  font-size: 1rem;
   font-weight: 400;
+}
+
+.right-nav img {
+  width: 2.3rem;
 }
 
 a {
@@ -103,7 +107,7 @@ a {
 footer {
   background: #ffffff;
   color: #000;
-  font-size: 1em;
+  font-size: 1rem;
   margin-top: 50px;
   padding: 30px 0px;
   text-align: center;
@@ -187,12 +191,13 @@ img {
 
 .welcome-info p {
   color: #fff;
+  font-size: 1.1rem;
 }
 
 .cta-red {
   background-color: #a60311;
   color: #fff;
-  font-size: 0.8em;
+  font-size: 1.1rem;
   padding: 5px 20px;
   border-radius: 5px;
   text-decoration: none;
@@ -282,43 +287,62 @@ img {
 }
 
 /* Sign Up Page */
-.sign-up_form {
-  max-width: 1000px;
-  margin: auto;
+
+.form-container {
+  color: black;
+  max-width: 760px;
+  margin: 20px auto;
+  padding: 20px;
+  background: lightgrey;
+  border-radius: 3px;
+  font-size: 1.1rem;
 }
 
-.sign-up_form_info input {
-  width: 350px;
-  padding: 5px;
-  border: 1px solid #b6b6b6;
+input {
+  width: 100%;
+  padding: 10px 0px;
+  font-size: 1rem;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+.form-error {
+  display: none;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+button {
+  background-color: #f2a516;
+  cursor: pointer;
+  border: none;
+  width: 200px;
+  padding: 1rem;
+  color: white;
+  margin-top: 30px;
   border-radius: 3px;
 }
 
-.sign-up_form p {
-  margin-bottom: 0px;
+button:disabled {
+  background: gray;
 }
 
-.radio-button {
-  margin: 30px 0px;
-  color: #000;
+.message {
+  max-width: 300px;
+  background-color: forestgreen;
+  color: white;
+  border-radius: 3px;
+  padding: 1rem;
 }
 
-.radio-button label {
-  margin-right: 30px;
-}
-
-.cta {
-  border-radius: 5px;
-  background-color: #f2a516;
-  color: #000;
-  padding: 10px 30px;
-  border: 0px solid;
-}
-
-.cta:hover {
-  background-color: #f2efeb;
-  color: #000;
-  border: solid #f2a516;
+.error {
+  color: red;
+  padding: 10px;
+  border: solid red;
 }
 
 /* Media Queries */

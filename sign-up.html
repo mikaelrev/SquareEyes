@@ -43,28 +43,44 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <section class="sign-up_form">
-      <h1>Sign Up</h1>
-      <div class="sign-up_form_info">
-        <p>Full Name</p>
-        <input type="text">
-        <p>E-mail</p>
-        <input type="email">
-        <p>Username</p>
-        <input type="text">
-        <p>Password</p>
-        <input type="password">
-        <p>Confirm Password</p>
-        <input type="password">
+  <h1>Sign Up</h1>
+  <main class="form-container">
+    <div id="message"></div>
+    <form id="sign-up-form">
+      <div>
+        <label>
+          Full Name (required)
+          <input type="text" name="fullName" id="fullName" />
+        </label>
+        <div class="form-error" id="fullNameError">Please enter your full name</div>
       </div>
-      <div class="radio-button">
-        <input type="radio" name="account-type" value="producer" id="producer"><label for="procuer">Producer</label>
-        <input type="radio" name="account-type" value="film-lover" id="film-lover"><label
-          for="film-lover">Film-lover</label>
+
+      <div>
+        <label>
+          Email (required)
+          <input type="email" name="email" id="email" />
+        </label>
+        <div class="form-error" id="emailError">Please enter a valid email address</div>
       </div>
-      <input type="submit" class="cta" value="Create Account">
-    </section>
+
+      <div>
+        <label>
+          Username (minimum 4 characters)
+          <input type="text" name="username" id="username" />
+        </label>
+        <div class="form-error" id="usernameError">Username must be at least 4 characters</div>
+      </div>
+
+      <div>
+        <label>
+          Password (minimum 8 characters)
+          <input type="password" name="password" id="password" />
+        </label>
+        <div class="form-error" id="passwordError">Password must be at least 8 characters</div>
+      </div>
+
+      <button>Create Account</button>
+    </form>
   </main>
   <footer>
     <p>Contact Us</p>
@@ -74,6 +90,9 @@
       <p>Telephone</p>
     </div>
   </footer>
+
+  <script src="js/components/error.js"></script>
+  <script src="js/sign-up.js"></script>
 </body>
 
 </html>
