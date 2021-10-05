@@ -57,7 +57,7 @@ function validateEmail(email) {
 
 function submitMessage(event) {
     event.preventDefault();
-    if(checkLength(fullName.value, 0) && checkLength(password.value, 7) && checkLength(unsername.value, 3) && validateEmail(email.value)) {
+    if(checkLength(fullName.value, 0) && checkLength(password.value, 7) && checkLength(username.value, 3) && validateEmail(email.value)) {
         message.innerHTML = `<div class="message">Account created</div>`;   
     }
     form.reset();

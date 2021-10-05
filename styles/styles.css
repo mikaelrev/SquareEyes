@@ -332,8 +332,8 @@ button:disabled {
 }
 
 .message {
-  max-width: 300px;
-  background-color: forestgreen;
+  max-width: 150px;
+  background-color: #f2a516;
   color: white;
   border-radius: 3px;
   padding: 1rem;
