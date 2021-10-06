@@ -33,7 +33,7 @@
         <li><a href="coming-soon.html" class="mobile">Coming Soon</a></li>
       </ul>
       <ul class="right-nav">
-        <li><input type="text" value="Search"></li>
+        <li class="mobile"><input type="text" value="Search"></li>
         <li><a href="sign-up.html">Login</a></li>
         <li class="or-button">
           <p>or</p>
@@ -80,12 +80,20 @@
           <div class="form-error" id="passwordError">Password must be at least 8 characters</div>
         </div>
 
+        <div>
+          <label>
+            Confirm Password
+            <input type="password" name="password" id="password" />
+          </label>
+          <div class="form-error" id="passwordError">Please comfirm your password</div>
+        </div>
+
         <button>Create Account</button>
       </form>
     </section>
   </main>
   <footer>
-    <p>Contact Us</p>
+    <a href="#">Contact Us</a>
     <div class="contact">
       <p>E-mail</p>
       <p>Address</p>
