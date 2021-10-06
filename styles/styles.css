@@ -19,6 +19,11 @@ h1 {
   margin: 60px 0px 10px 0px;
 }
 
+h2 {
+  margin: 0px;
+  padding: 0px;
+}
+
 p {
   color: #000;
 }
@@ -33,7 +38,6 @@ header {
   width: 100%;
   padding: 0px 0px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 30px;
 }
 
 header a {
@@ -134,19 +138,29 @@ img {
 
 .movies {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  width: 80%;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
   gap: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 4rem;
 }
 
 .moviecard {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+.moviecard-img {
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .moviecard img {
-  width: 100%;
+  width: 150px;
 }
 
 .movies h2 {
@@ -156,13 +170,14 @@ img {
 .movies a {
   text-decoration: none;
   display: inline-block;
-  margin-top: 10px;
+  font-size: 1rem;
 }
 
 /* Home Page */
 .welcome-section {
   background-color: #f2efeb;
   width: 100%;
+  margin-bottom: 4rem;
 }
 
 .welcome-container {
@@ -219,6 +234,12 @@ img {
 
 .about-info {
   width: 400px;
+}
+
+.about-info :first-child,
+.movie-details,
+.rent p {
+  font-weight: bold;
 }
 
 .play-movie {
@@ -370,7 +391,7 @@ button:disabled {
 
   .movies {
     grid-template-columns: 1fr 1fr;
-    width: 70%;
+    width: 100%;
   }
 
   @media (max-width: 800px) {
@@ -412,10 +433,6 @@ button:disabled {
     .about-info {
       width: 100%;
       order: 1;
-    }
-
-    .rent p {
-      font-weight: 700;
     }
 
     /* Account Page */
