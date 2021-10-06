@@ -138,7 +138,7 @@ img {
 
 .movies {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   width: 100%;
   gap: 30px;
   margin-bottom: 4rem;
@@ -147,7 +147,6 @@ img {
 .moviecard {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
 .moviecard-img {
@@ -160,7 +159,7 @@ img {
 }
 
 .moviecard img {
-  width: 150px;
+  width: 200px;
 }
 
 .movies h2 {
@@ -412,7 +411,7 @@ button:disabled {
 
     .movies {
       width: 100%;
-      justify-items: left;
+      /* justify-items: left; */
     }
 
     /* Movie Title Page */
@@ -469,7 +468,7 @@ button:disabled {
     }
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 550px) {
     .movies {
       grid-template-columns: 1fr;
     }
