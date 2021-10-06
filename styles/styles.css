@@ -414,6 +414,10 @@ button:disabled {
       order: 1;
     }
 
+    .rent p {
+      font-weight: 700;
+    }
+
     /* Account Page */
     .account-links ul {
       display: flex;
