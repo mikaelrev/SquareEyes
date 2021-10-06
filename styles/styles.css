@@ -212,7 +212,8 @@ img {
   background-color: #a60311;
   color: #fff;
   font-size: 1rem;
-  padding: 5px 20px;
+  text-align: center;
+  padding: 15px 20px;
   border-radius: 5px;
   text-decoration: none;
 }
@@ -245,6 +246,10 @@ img {
   background-color: #c7c5c2;
   width: 450px;
   height: 250px;
+}
+
+.rent * {
+  margin-right: 10px;
 }
 
 /* Account Page */
@@ -367,7 +372,7 @@ button:disabled {
 }
 
 /* Media Queries */
-@media (max-width: 1024px) {
+@media (max-width: 1050px) {
   .main-nav {
     align-items: center;
   }
@@ -393,6 +398,32 @@ button:disabled {
     width: 100%;
   }
 
+  /* Movie Title Page */
+
+  .movie-page,
+  .title-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .play-movie {
+    width: 100%;
+  }
+
+  .movie-details {
+    order: 3;
+  }
+
+  .about-info {
+    width: 60%;
+    order: 2;
+    margin: 20px 0px 20px 0px;
+  }
+
+  .rent {
+    margin-bottom: 30px;
+  }
+
   @media (max-width: 800px) {
     .main-nav {
       flex-direction: column;
@@ -411,7 +442,6 @@ button:disabled {
 
     .movies {
       width: 100%;
-      /* justify-items: left; */
     }
 
     /* Movie Title Page */
@@ -471,6 +501,12 @@ button:disabled {
   @media screen and (max-width: 550px) {
     .movies {
       grid-template-columns: 1fr;
+    }
+
+    .rent * {
+      display: block;
+      margin-bottom: 20px;
+      max-width: 200px;
     }
   }
 }
