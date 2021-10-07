@@ -63,9 +63,22 @@
       </div>
       <div class="rent">
         <p>Rent</p>
-        <a href="#" class="cta-red">Rent for 49 kr</a>
-        <a href="#" class="cta-red">Buy for 150 kr</a>
-    </div>
+        <button class="cta-red rent-button">Rent for 49 kr</button>
+        <button class="cta-red buy-button">Buy for 149 kr</button>
+        <div class="pop-up" id="pop-up">
+          <div class="pop-up_header">
+            <div class="title">Purchase Movie Title</div>
+            <button class="close-button">&times;</button>
+          </div>
+          <div class="pop-up_body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, aperiam!
+          </div>
+          <div class="confirm">
+            <button class="confirm-button">Confirm purchase</button>
+          </div>
+        </div>
+        <div id="overlay"></div>
+      </div>
     </section>
   </main>
   <footer>
@@ -76,6 +89,8 @@
       <p>Telephone</p>
     </div>
   </footer>
+  <script src="js/components/error.js"></script>
+  <script src="js/rent-pop-up.js"></script>
 </body>
 
 </html>
