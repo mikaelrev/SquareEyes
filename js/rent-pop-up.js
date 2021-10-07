@@ -1,19 +1,24 @@
 const rent = document.querySelector(".rent-button");
 const buy = document.querySelector(".buy-button");
-const closeButton = document.querySelector(".close-button");
+const cancelButton = document.querySelector(".cancel-button");
 const confirmButton = document.querySelector(".confirm-button");
+const confirmSection = document.querySelector(".confirm");
 const overlay = document.getElementById("overlay");
 const popup = document.getElementById("pop-up");
 const popupBody = document.querySelector(".pop-up_body");
+const rentSection = document.querySelector(".rent");
+
 
 rent.onclick = function() {
     activatePopup();
-    popupBody.innerHTML = `<p class="purchase-text">Cofirm purchase 49 kr</p>`;
+    popupBody.innerHTML = `<img src="images/movie-thumbnail-xsmall.jpg"></img>
+                            <p class="purchase-text">Cofirm purchase 49 kr</p>`;
 }
 
 buy.onclick = function() {
     activatePopup();
-    popupBody.innerHTML = `<p class="purchase-text">Confirm purchase 149 kr</p>`;
+    popupBody.innerHTML = `<img src="images/movie-thumbnail-xsmall.jpg"></img>
+                            <p class="purchase-text">Confirm purchase 149 kr</p>`;
 }
 
 function activatePopup() {
@@ -21,7 +26,7 @@ function activatePopup() {
     overlay.classList.add("active");
 }
 
-closeButton.onclick = function() {
+cancelButton.onclick = function() {
     removePopup();
 }
 
@@ -35,5 +40,6 @@ function removePopup() {
 }
 
 confirmButton.onclick = function() {
-    popupBody.innerHTML = `<div class="purchase-message">Movie Title Purchased</div>`;
+    confirmSection.innerHTML = `<div class="purchase-message">Movie Title Purchased</div>`;
+    popupBody.innerHTML = ``;
 }
