@@ -208,7 +208,7 @@ img {
   font-size: 1.1rem;
 }
 
-.cta-red {
+.cta-yellow {
   background-color: #f2a516;
   color: #fff;
   border: none;
@@ -220,7 +220,7 @@ img {
   text-decoration: none;
 }
 
-.cta-red:hover {
+.cta-yellow:hover {
   color: black;
 }
 
@@ -281,6 +281,10 @@ img {
   margin: auto;
 }
 
+.pop-up img {
+  max-width: 100%;
+}
+
 .confirm {
   display: flex;
   flex-direction: column;
@@ -332,9 +336,8 @@ img {
 .purchase-message {
   margin: auto;
   background: forestgreen;
-  max-width: 90%;
-  font-size: 1.25rem;
-  padding: 20px 20px;
+  font-size: 1.1rem;
+  padding: 15px 15px;
   border-radius: 3px;
 }
 
@@ -593,10 +596,13 @@ button:disabled {
       grid-template-columns: 1fr;
     }
 
-    .rent * {
+    .rent .cta-yellow {
       display: block;
       margin-bottom: 20px;
-      max-width: 200px;
+    }
+
+    .confirm {
+      max-width: 100%;
     }
   }
 }
