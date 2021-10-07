@@ -208,8 +208,7 @@ img {
   font-size: 1.1rem;
 }
 
-.cta-red,
-.confirm-button {
+.cta-red {
   background-color: #f2a516;
   color: #fff;
   border: none;
@@ -249,10 +248,6 @@ img {
   height: 250px;
 }
 
-.rent * {
-  margin-right: 10px;
-}
-
 /* Movie page Pop-up */
 
 .pop-up {
@@ -274,34 +269,47 @@ img {
   transform: translate(-50%, -50%) scale(1);
 }
 
-.pop-up_header {
-  padding: 10px 16px;
-  display: flex;
-}
-
-.pop-up_header .title {
+.title {
+  padding: 25px;
   font-size: 1.25rem;
   font-weight: bold;
   flex: 2;
 }
 
-.pop-up_header .close-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background: none;
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
 .pop-up_body {
   padding: 10px 15px;
+  margin: auto;
 }
 
 .confirm {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   padding: 20px;
+  gap: 30px;
+  max-width: 50%;
+  margin: auto;
+}
+
+.confirm-button {
+  background-color: green;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 15px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.cancel-button {
+  background-color: red;
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 #overlay {
@@ -324,9 +332,9 @@ img {
 .purchase-message {
   margin: auto;
   background: forestgreen;
-  max-width: 70%;
+  max-width: 90%;
   font-size: 1.25rem;
-  padding: 1rem;
+  padding: 20px 20px;
   border-radius: 3px;
 }
 
