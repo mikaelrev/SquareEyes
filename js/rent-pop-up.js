@@ -41,5 +41,5 @@ function removePopup() {
 
 confirmButton.onclick = function() {
     confirmSection.innerHTML = `<div class="purchase-message">Movie Title Purchased</div>`;
-    popupBody.innerHTML = ``;
+    popupBody.innerHTML += ``;
 }
