@@ -559,22 +559,25 @@ button:disabled {
       margin: 0px;
     }
 
-    .account-info {
-      order: 1;
-    }
-
     .account-links {
       margin: 0px;
-      order: 2;
     }
 
     .folders {
       margin: 0px;
-      order: 3;
     }
   }
 
   @media screen and (max-width: 550px) {
+    h1,
+    h2 {
+      text-align: center;
+    }
+
+    h2 {
+      padding: 0px;
+    }
+
     .movies {
       grid-template-columns: 1fr;
     }
