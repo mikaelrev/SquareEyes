@@ -136,7 +136,11 @@ img {
   margin-top: 0px;
 }
 
-.movies {
+.featured-movies,
+.recommended-movies,
+.new-movies,
+.top_rated-movies,
+.coming_soon-movies {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
