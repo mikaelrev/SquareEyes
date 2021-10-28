@@ -2,34 +2,29 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const url = "https://squareeyes.flower-power.one/wp-json/wc/store/products?id=" + id;
+console.log(id);
+
+const url = "https://squareeyes.flower-power.one/wp-json/wc/store/products/" + id;
 
 const posterContainer = document.querySelector(".play-movie");
 
 async function fetchPosterImage() {
-    try {
-        const response = await fetch(url);
-        const results = await response.json();
-        const posterResults = results.images[0].src;
+    const response = await fetch(url);
+    const results = await response.json();
+    console.log(results);
 
-        document.title = `${posterResults.name}`;
+    document.title = `${results.name}`;
 
-        posterContainer.innerHTML = "";
-
-        displayPoster(posterResults);
-    }
-    catch(error) {
-        console.log(error);
-    }
+    posterContainer.innerHTML = "";
+    
+    displayPoster(results);
 }
 
 fetchPosterImage();
 
-function displayPoster(posterResults) {
-    for(let i = 0; i < posterResults.length; i++) {
-        const poster = posterResults[i].images[0].src;
-        posterContainer.innerHTML += 
-        `<div class="image" <a href="#"style="background-image: url('${poster[0].src}')"></div>`;
-    }
-    
+function displayPoster(results) {
+    posterContainer.innerHTML = 
+    `<div class="movie-poster">
+    <img src="${results.images[0].src}">
+    </div>`;
 }

@@ -39,28 +39,22 @@ async function fetchRecommended() {
 fetchRecommended();
 
 
-
-
 function postersFeatured(posters) {
-    for(let i = 0; i < posters.length; i++) {
-        const images = posters[i].images[0].src;
-    
+    posters.forEach(function(poster) {
         featuredContainer.innerHTML += 
-        `<div class="moviecard moviecard-img">
-        <a href="movie-title.html?id=${posters[i].id}"><img src="${images}">
-        ${posters[i].name}</a>
+        `<div class="moviecard">
+        <a href="movie-title.html?id=${poster.id}"><img src="${poster.images[0].src}">
+        ${poster.name}</a>
         </div>`;
-    }
+    })
 }
 
 function postersRecommended(posters) {
-    for(let i = 0; i < posters.length; i++) {
-        const images = posters[i].images[0].src;
-    
+    posters.forEach(function(poster) {
         recommendedContainer.innerHTML += 
         `<div class="moviecard">
-        <a href="movie-title.html?id=${posters[i].id}"><img src="${images}">
-        ${posters[i].name}</a>
+        <a href="movie-title.html?id=${poster.id}"><img src="${poster.images[0].src}">
+        ${poster.name}</a>
         </div>`;
-    }
+    })
 }
