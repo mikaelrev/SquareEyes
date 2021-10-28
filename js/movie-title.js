@@ -14,6 +14,8 @@ async function fetchPosterImage() {
 
         document.title = `${posterResults.name}`;
 
+        posterContainer.innerHTML = "";
+
         displayPoster(posterResults);
     }
     catch(error) {
@@ -24,6 +26,10 @@ async function fetchPosterImage() {
 fetchPosterImage();
 
 function displayPoster(posterResults) {
-    posterContainer.innerHTML = 
-    `<div class="image" <a href="#"style="background-image: url('${posterResults[0].src}')"></div>`;
+    for(let i = 0; i < posterResults.length; i++) {
+        const poster = posterResults[i].images[0].src;
+        posterContainer.innerHTML += 
+        `<div class="image" <a href="#"style="background-image: url('${poster[0].src}')"></div>`;
+    }
+    
 }
