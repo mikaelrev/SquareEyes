@@ -1,52 +1,97 @@
 const newMoviesUrl = "https://squareeyes.flower-power.one/wp-json/wc/store/products?category=19";
 const topRatedUrl = "https://squareeyes.flower-power.one/wp-json/wc/store/products?category=17";
-const ComingUrl = "https://squareeyes.flower-power.one/wp-json/wc/store/products?category=18"
-const comingSoon = document.querySelector(".coming_soon-movies");
-const topRated = document.querySelector(".top_rated-movies");
-const newMovies = document.querySelector(".new-movies")
+const ComingSoonUrl = "https://squareeyes.flower-power.one/wp-json/wc/store/products?category=18"
+const comingSoonContainer = document.querySelector(".coming_soon-movies");
+const topRatedContainer = document.querySelector(".top_rated-movies");
+const newMoviesContainer = document.querySelector(".new-movies")
 
 
-async function getNewMovies() {
-    const response = await fetch(newMoviesUrl);
-    const getResults = await response.json();
-    
-    getResults.forEach(function(movie) {
-        newMovies.innerHTML +=
-        `<div class="moviecard">
-        <img src="${movie.images[0].src}" alt="${movie.name}">
-        <a href="movie-title.html?id=${getResults.id}">${movie.name}</a>
-        </div>`;
-    })
+async function fetchNewMovies() {
+    try {
+        const response = await fetch(newMoviesUrl);
+        const results = await response.json();
+        const posters = results;
+        console.log(posters);
+
+        newMoviesContainer.innerHTML = "";
+
+        postersNewMovies(posters);
+        }
+        catch(error) {
+        console.log(error);
+    }
 }
 
-getNewMovies();
+fetchNewMovies()
 
-async function getTopRated() {
-    const response = await fetch(topRatedUrl);
-    const getResults = await response.json();
-    
-    getResults.forEach(function(movie) {
-        topRated.innerHTML +=
-        `<div class="moviecard">
-        <img src="${movie.images[0].src}" alt="${movie.name}">
-        <a>${movie.name}</a>
-        </div>`;
-    })
+async function fetchTopRated() {
+    try {
+        const response = await fetch(topRatedUrl);
+        const results = await response.json();
+        const posters = results;
+
+        topRatedContainer.innerHTML = "";
+
+        postersTopRated(posters);
+
+        }
+        catch(error) {
+    }
 }
 
-getTopRated();
+fetchTopRated();
 
-async function getComingSoon() {
-    const response = await fetch(ComingUrl);
-    const getResults = await response.json();
-    
-    getResults.forEach(function(movie) {
-        comingSoon.innerHTML +=
-        `<div class="moviecard">
-        <img src="${movie.images[0].src}" alt="${movie.name}">
-        <a>${movie.name}</a>
-        </div>`;
-    })
+async function fetchComingSoon() {
+    try {
+        const response = await fetch(ComingSoonUrl);
+        const results = await response.json();
+        const posters = results;
+
+        comingSoonContainer.innerHTML = "";
+
+        postersComingSoon(posters);
+
+        }
+        catch(error) {
+    }
 }
 
-getComingSoon();
+fetchComingSoon();
+
+
+
+function postersNewMovies(posters) {
+    for(let i = 0; i < posters.length; i++) {
+        const images = posters[i].images[0].src;
+    
+        newMoviesContainer.innerHTML += 
+        `<div class="moviecard moviecard-img">
+        <a href="movie-title.html?id=${posters[i].id}"><img src="${images}">
+        ${posters[i].name}</a>
+        </div>`;
+    }
+}
+
+function postersTopRated(posters) {
+    for(let i = 0; i < posters.length; i++) {
+        const images = posters[i].images[0].src;
+    
+        topRatedContainer.innerHTML += 
+        `<div class="moviecard">
+        <a href="movie-title.html?id=${posters[i].id}"><img src="${images}">
+        ${posters[i].name}</a>
+        </div>`;
+    }
+}
+
+function postersComingSoon(posters) {
+    for(let i = 0; i < posters.length; i++) {
+        const images = posters[i].images[0].src;
+    
+        comingSoonContainer.innerHTML += 
+        `<div class="moviecard">
+        <a href="movie-title.html?id=${posters[i].id}"><img src="${images}">
+        ${posters[i].name}</a>
+        </div>`;
+    }
+}

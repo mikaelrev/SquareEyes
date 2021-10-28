@@ -149,21 +149,12 @@ img {
 }
 
 .moviecard {
-  display: flex;
+  width: 25%;
   flex-direction: column;
 }
 
 .moviecard a {
   font-size: 1.3rem;
-}
-
-.moviecard-img {
-  background-color: white;
-  border-radius: 0.5rem;
-  width: 100%;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: center;
 }
 
 .moviecard img {

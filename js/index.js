@@ -1,39 +1,66 @@
 const featuredUrl = "https://squareeyes.flower-power.one/wp-json/wc/store/products?category=16";
 const recommendedUrl = "https://squareeyes.flower-power.one/wp-json/wc/store/products?category=20"
-const featured = document.querySelector(".featured-movies");
-const recommended = document.querySelector(".recommended-movies");
+const featuredContainer = document.querySelector(".featured-movies");
+const recommendedContainer = document.querySelector(".recommended-movies");
 
+async function fetchFeatured() {
+    try {
+        const response = await fetch(featuredUrl);
+        const results = await response.json();
+        const posters = results;
+        console.log(posters);
 
-async function getFeatured() {
-    const response = await fetch(featuredUrl);
-    const getResults = await response.json();
-    
-    getResults.forEach(function(movie) {
-        featured.innerHTML +=
-        `<div class="moviecard">
-        <img src="${movie.images[0].src}" alt="${movie.name}">
-        <a>${movie.name}</a>
-        </div>`;
-    })
+        featuredContainer.innerHTML = "";
+
+        postersFeatured(posters);
+        }
+        catch(error) {
+        console.log(error);
+    }
 }
 
-getFeatured();
+fetchFeatured()
 
-async function getRecommended() {
-    const response = await fetch(recommendedUrl);
-    const getResults = await response.json();
-    console.log(getResults);
-    
-    getResults.forEach(function(movie) {
-        recommended.innerHTML +=
-        `<div class="moviecard">
-        <img src="${movie.images[0].src}" alt="${movie.name}">
-        <a href="movie-title.html?id=${getResults.id}">${getResults.name}</a>
-        </div>`;
-    })
+async function fetchRecommended() {
+    try {
+        const response = await fetch(recommendedUrl);
+        const results = await response.json();
+        const posters = results;
+
+        recommendedContainer.innerHTML = "";
+
+        postersRecommended(posters);
+
+        }
+        catch(error) {
+    }
 }
 
-getRecommended();
+fetchRecommended();
 
 
 
+
+function postersFeatured(posters) {
+    for(let i = 0; i < posters.length; i++) {
+        const images = posters[i].images[0].src;
+    
+        featuredContainer.innerHTML += 
+        `<div class="moviecard moviecard-img">
+        <a href="movie-title.html?id=${posters[i].id}"><img src="${images}">
+        ${posters[i].name}</a>
+        </div>`;
+    }
+}
+
+function postersRecommended(posters) {
+    for(let i = 0; i < posters.length; i++) {
+        const images = posters[i].images[0].src;
+    
+        recommendedContainer.innerHTML += 
+        `<div class="moviecard">
+        <a href="movie-title.html?id=${posters[i].id}"><img src="${images}">
+        ${posters[i].name}</a>
+        </div>`;
+    }
+}
