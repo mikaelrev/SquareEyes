@@ -136,7 +136,11 @@ img {
   margin-top: 0px;
 }
 
-.movies {
+.featured-movies,
+.recommended-movies,
+.new-movies,
+.top_rated-movies,
+.coming_soon-movies {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
@@ -145,7 +149,7 @@ img {
 }
 
 .moviecard {
-  display: flex;
+  width: 80%;
   flex-direction: column;
 }
 
@@ -153,17 +157,8 @@ img {
   font-size: 1.3rem;
 }
 
-.moviecard-img {
-  background-color: white;
-  border-radius: 0.5rem;
-  width: 100%;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: center;
-}
-
 .moviecard img {
-  width: 200px;
+  width: 100%;
 }
 
 /* Home Page */
@@ -226,9 +221,15 @@ img {
 }
 
 .play-movie {
-  background-color: gray;
-  width: 450px;
-  height: 250px;
+  width: 50%;
+}
+
+.play-movie img {
+  width: 100%;
+}
+
+.movie-poster {
+  width: 100%;
 }
 
 /* Movie page Pop-up */
@@ -482,7 +483,7 @@ button:disabled {
   }
 
   .play-movie {
-    width: 100%;
+    width: 50%;
   }
 
   .movie-details {
@@ -519,6 +520,14 @@ button:disabled {
       height: 250px;
     }
 
+    .featured-movies,
+    .recommended-movies,
+    .new-movies,
+    .top_rated-movies,
+    .coming_soon-movies {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     /* Movie Title Page */
     .movie-page,
     .title-info {
@@ -527,7 +536,7 @@ button:disabled {
     }
 
     .play-movie {
-      width: 100%;
+      width: 60%;
     }
 
     .movie-details {
@@ -577,8 +586,19 @@ button:disabled {
       padding: 0px;
     }
 
-    .movies {
+    .featured-movies,
+    .recommended-movies,
+    .new-movies,
+    .top_rated-movies,
+    .coming_soon-movies {
       grid-template-columns: 1fr;
+    }
+
+    .moviecard img {
+    }
+
+    .play-movie {
+      width: 80%;
     }
 
     .welcome-container {
