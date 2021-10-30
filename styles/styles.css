@@ -221,7 +221,7 @@ img {
 }
 
 .play-movie {
-  width: 400px;
+  width: 50%;
 }
 
 .play-movie img {
@@ -483,7 +483,7 @@ button:disabled {
   }
 
   .play-movie {
-    width: 25%;
+    width: 50%;
   }
 
   .movie-details {
@@ -520,6 +520,14 @@ button:disabled {
       height: 250px;
     }
 
+    .featured-movies,
+    .recommended-movies,
+    .new-movies,
+    .top_rated-movies,
+    .coming_soon-movies {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     /* Movie Title Page */
     .movie-page,
     .title-info {
@@ -528,7 +536,7 @@ button:disabled {
     }
 
     .play-movie {
-      width: 100%;
+      width: 60%;
     }
 
     .movie-details {
@@ -578,8 +586,19 @@ button:disabled {
       padding: 0px;
     }
 
-    .movies {
+    .featured-movies,
+    .recommended-movies,
+    .new-movies,
+    .top_rated-movies,
+    .coming_soon-movies {
       grid-template-columns: 1fr;
+    }
+
+    .moviecard img {
+    }
+
+    .play-movie {
+      width: 80%;
     }
 
     .welcome-container {
