@@ -35,22 +35,17 @@ main {
 
 header {
   background: #ffffff;
-  width: 100%;
-  padding: 0px 0px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
 
-header a {
-  text-decoration: none;
-}
-
 header ul {
-  margin: 0px;
-  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 header li {
-  display: flex;
+  list-style: none;
   padding: 20px;
 }
 
@@ -61,46 +56,38 @@ header input {
   padding: 8px;
 }
 
-.logo {
-  padding: 0px;
-}
-
-.logo img {
-  max-width: 170px;
-  margin: 10px 10px 0px 50px;
+.icon {
+  display: none;
 }
 
 .main-nav {
   display: flex;
-  flex-direction: row;
-  width: 100%;
 }
 
-.left-nav,
-.right-nav {
-  display: flex;
-  align-items: center;
-  width: 50%;
-}
-
-.right-nav {
-  justify-content: flex-end;
-}
-
-.right-nav li,
-.left-nav a {
+.main-nav a {
   font-weight: bold;
   font-size: 1.2rem;
 }
 
-.right-nav p {
-  color: #000;
-  font-size: 1rem;
-  font-weight: 400;
+.links {
+  flex: 1;
 }
 
-.right-nav img {
+.logo {
+  max-width: 200px;
+  padding: 1rem 2rem;
+}
+
+.push {
+  margin-left: auto;
+}
+
+.profile-pic {
   width: 2.3rem;
+}
+
+#hamburger-menu {
+  display: none;
 }
 
 a {
@@ -446,16 +433,12 @@ button:disabled {
 
 /* Media Queries */
 @media (max-width: 1050px) {
-  .main-nav {
-    align-items: center;
+  .nav-list {
+    justify-content: space-evenly;
   }
 
-  .left-nav {
-    width: 70%;
-  }
-
-  .right-nav {
-    width: 30%;
+  .links a {
+    padding: 1rem;
   }
 
   .or-button {
@@ -500,20 +483,25 @@ button:disabled {
     margin-bottom: 30px;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 820px) {
     .main-nav {
-      flex-direction: column;
+      display: block;
+      /* text-align: center; */
     }
 
-    .left-nav,
-    .right-nav {
-      flex-direction: column;
-      width: 100%;
+    .links {
+      display: none;
+      padding: 0;
     }
 
-    .left-nav > *,
-    .right-nav > * {
-      padding: 7px;
+    .icon {
+      display: block;
+      border: none;
+      position: absolute;
+      width: 4em;
+      height: 4em;
+      top: 2rem;
+      right: 1rem;
     }
 
     .welcome-container {
@@ -592,9 +580,6 @@ button:disabled {
     .top_rated-movies,
     .coming_soon-movies {
       grid-template-columns: 1fr;
-    }
-
-    .moviecard img {
     }
 
     .play-movie {
