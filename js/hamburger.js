@@ -6,7 +6,7 @@ hamburgerMenu.addEventListener('click', () => {
         menu.style.display = "none";
     } else {
         menu.style.display = "block";
-    }
+    } 
 })
 
 

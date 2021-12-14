@@ -21,8 +21,12 @@ h1 {
 }
 
 h2 {
-  margin: 0px;
-  padding-left: 60px;
+  padding: 2rem 5rem;
+}
+
+h1,
+h2 {
+  text-align: center;
 }
 
 p {
@@ -86,10 +90,6 @@ header input {
   width: 2.3rem;
 }
 
-#hamburger-menu {
-  display: none;
-}
-
 a {
   color: black;
   text-decoration: none;
@@ -130,14 +130,14 @@ img {
 .coming_soon-movies {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  width: 90%;
+  margin: auto;
   gap: 30px;
-  padding: 40px 60px 40px 60px;
   margin-bottom: 4rem;
 }
 
 .moviecard {
   width: 80%;
-  flex-direction: column;
 }
 
 .moviecard a {
@@ -486,12 +486,15 @@ button:disabled {
   @media (max-width: 820px) {
     .main-nav {
       display: block;
-      /* text-align: center; */
     }
 
     .links {
       display: none;
       padding: 0;
+    }
+
+    .links a {
+      font-size: 1.5rem;
     }
 
     .icon {
@@ -565,13 +568,9 @@ button:disabled {
   }
 
   @media screen and (max-width: 550px) {
-    h1,
     h2 {
-      text-align: center;
-    }
-
-    h2 {
-      padding: 0px;
+      padding: 0;
+      margin-bottom: 3rem;
     }
 
     .featured-movies,
@@ -580,6 +579,13 @@ button:disabled {
     .top_rated-movies,
     .coming_soon-movies {
       grid-template-columns: 1fr;
+      width: 60%;
+      text-align: center;
+    }
+
+    .moviecard {
+      width: 100%;
+      margin-bottom: 2rem;
     }
 
     .play-movie {
