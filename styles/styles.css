@@ -14,15 +14,14 @@ html {
 h1 {
   font-family: "Archivo", sans-serif;
   color: #a60311;
-  font-size: 2rem;
-  max-width: 100%;
-  margin: 0px;
-  padding: 40px 60px;
+  font-size: 2.5rem;
+  width: 90%;
+  margin: 3rem 5%;
 }
 
 h2 {
-  margin: 0px;
-  padding-left: 60px;
+  margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
 p {
@@ -35,22 +34,17 @@ main {
 
 header {
   background: #ffffff;
-  width: 100%;
-  padding: 0px 0px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
 
-header a {
-  text-decoration: none;
-}
-
 header ul {
-  margin: 0px;
-  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 header li {
-  display: flex;
+  list-style: none;
   padding: 20px;
 }
 
@@ -61,45 +55,37 @@ header input {
   padding: 8px;
 }
 
-.logo {
-  padding: 0px;
-}
-
-.logo img {
-  max-width: 170px;
-  margin: 10px 10px 0px 50px;
+.icon {
+  display: none;
 }
 
 .main-nav {
   display: flex;
-  flex-direction: row;
-  width: 100%;
 }
 
-.left-nav,
-.right-nav {
-  display: flex;
-  align-items: center;
-  width: 50%;
-}
-
-.right-nav {
-  justify-content: flex-end;
-}
-
-.right-nav li,
-.left-nav a {
+.main-nav a {
   font-weight: bold;
   font-size: 1.2rem;
 }
 
-.right-nav p {
-  color: #000;
-  font-size: 1rem;
-  font-weight: 400;
+.links {
+  flex: 1;
 }
 
-.right-nav img {
+.links a {
+  padding: 1rem;
+}
+
+.logo {
+  max-width: 200px;
+  padding: 1rem 2rem;
+}
+
+.push {
+  margin-left: auto;
+}
+
+.profile-pic {
   width: 2.3rem;
 }
 
@@ -139,18 +125,16 @@ img {
 .featured-movies,
 .recommended-movies,
 .new-movies,
-.top_rated-movies,
-.coming_soon-movies {
+.top-rated-movies,
+.coming-soon-movies {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  padding: 40px 60px 40px 60px;
-  margin-bottom: 4rem;
+  gap: 2rem;
+  margin: 0 auto 4rem;
 }
 
 .moviecard {
-  width: 80%;
-  flex-direction: column;
+  width: 70%;
 }
 
 .moviecard a {
@@ -176,10 +160,8 @@ img {
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 50px 0px;
+  padding-bottom: 5rem;
 }
 
 .welcome-title {
@@ -200,6 +182,15 @@ img {
 
 .cta-yellow:hover {
   color: white;
+}
+
+.featured-container,
+.recommended-container,
+.new-container,
+.top-rated-container,
+.coming-soon-container {
+  width: 90%;
+  margin: 0 auto 5rem;
 }
 
 /* Movie-Title Page */
@@ -241,7 +232,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
-  border-radius: 1rem;
+  border-radius: 0.2rem;
   z-index: 10;
   background-color: lightgrey;
   width: 500px;
@@ -446,32 +437,16 @@ button:disabled {
 
 /* Media Queries */
 @media (max-width: 1050px) {
-  .main-nav {
-    align-items: center;
-  }
-
-  .left-nav {
-    width: 70%;
-  }
-
-  .right-nav {
-    width: 30%;
-  }
-
-  .or-button {
-    display: none;
+  .nav-list {
+    justify-content: space-evenly;
   }
 
   .mobile {
     display: none;
   }
 
-  .movies {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .welcome-container {
-    height: 300px;
+  .moviecard {
+    width: 90%;
   }
 
   /* Movie Title Page */
@@ -500,20 +475,36 @@ button:disabled {
     margin-bottom: 30px;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 820px) {
     .main-nav {
-      flex-direction: column;
+      display: block;
     }
 
-    .left-nav,
-    .right-nav {
-      flex-direction: column;
-      width: 100%;
+    .moviecard {
+      width: 70%;
     }
 
-    .left-nav > *,
-    .right-nav > * {
-      padding: 7px;
+    h2 {
+      text-align: center;
+    }
+
+    .links {
+      display: none;
+      padding: 0;
+    }
+
+    .links a {
+      font-size: 1.4rem;
+    }
+
+    .icon {
+      display: block;
+      border: none;
+      position: absolute;
+      width: 4em;
+      height: 4em;
+      top: 2rem;
+      right: 1rem;
     }
 
     .welcome-container {
@@ -523,9 +514,10 @@ button:disabled {
     .featured-movies,
     .recommended-movies,
     .new-movies,
-    .top_rated-movies,
-    .coming_soon-movies {
+    .top-rated-movies,
+    .coming-soon-movies {
       grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
     }
 
     /* Movie Title Page */
@@ -577,24 +569,22 @@ button:disabled {
   }
 
   @media screen and (max-width: 550px) {
-    h1,
-    h2 {
+    main {
       text-align: center;
-    }
-
-    h2 {
-      padding: 0px;
     }
 
     .featured-movies,
     .recommended-movies,
     .new-movies,
-    .top_rated-movies,
-    .coming_soon-movies {
+    .top-rated-movies,
+    .coming-soon-movies {
       grid-template-columns: 1fr;
+      width: 70%;
     }
 
-    .moviecard img {
+    .moviecard {
+      width: 100%;
+      margin-bottom: 2rem;
     }
 
     .play-movie {
