@@ -1,8 +1,8 @@
 const newMoviesUrl = "https://squareeyes.flower-power.one/wp-json/wc/store/products?category=19";
 const topRatedUrl = "https://squareeyes.flower-power.one/wp-json/wc/store/products?category=17";
 const ComingSoonUrl = "https://squareeyes.flower-power.one/wp-json/wc/store/products?category=18"
-const comingSoonContainer = document.querySelector(".coming_soon-movies");
-const topRatedContainer = document.querySelector(".top_rated-movies");
+const comingSoonContainer = document.querySelector(".coming-soon-movies");
+const topRatedContainer = document.querySelector(".top-rated-movies");
 const newMoviesContainer = document.querySelector(".new-movies")
 
 
