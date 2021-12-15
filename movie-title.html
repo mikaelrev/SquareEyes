@@ -26,19 +26,19 @@
 </head>
 
 <body>
-  <header>
-    <nav class="main-nav">
+  <header class="main-nav">
+    <div>
       <a href="index.html"><img class="logo" src="images/SquareEyesLogo.png" alt="Square Eyes Logo"></a>
-      <ul class="links">
+    </div>
+    <button class="nav-toggle" aria-controls="links" aria-expanded="false"></button>
+    <nav>
+      <ul id="links" data-visible="false" class="links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="movies.html">Movies</a></li>
-        <li class="push mobile"><input type="text" value="Search"></li>
         <li><a href="sign-up.html">Sign Up</a></li>
         <li><a href="account.html"><img class="profile-pic" src="images/account_circle_black_24dp.svg" alt="Profile picture"></a></li>
       </ul>
     </nav>
-    <button class="icon"><i class="fa fa-bars"></i>
-    </button>
   </header>
   <main class="movie-page">
     <h1>Movie Title</h1>

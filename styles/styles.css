@@ -9,6 +9,7 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -37,30 +38,15 @@ header {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
 
-header ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-header li {
-  list-style: none;
-  padding: 20px;
-}
-
-header input {
-  border: 1px solid black;
-  border-radius: 5px;
-  width: fit-content;
-  padding: 8px;
-}
-
-.icon {
-  display: none;
+.logo {
+  max-width: 200px;
+  margin: 1rem;
 }
 
 .main-nav {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .main-nav a {
@@ -69,20 +55,20 @@ header input {
 }
 
 .links {
-  flex: 1;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 0 2rem 0 0;
+  margin: 0;
+  gap: 4rem;
 }
 
 .links a {
   padding: 1rem;
 }
 
-.logo {
-  max-width: 200px;
-  padding: 1rem 2rem;
-}
-
-.push {
-  margin-left: auto;
+.nav-toggle {
+  display: none;
 }
 
 .profile-pic {
@@ -436,21 +422,82 @@ button:disabled {
 }
 
 /* Media Queries */
-@media (max-width: 1050px) {
-  .nav-list {
-    justify-content: space-evenly;
+@media (max-width: 820px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 
-  .mobile {
-    display: none;
+  main {
+    margin-top: 8rem;
+  }
+
+  .logo {
+    width: 140px;
+  }
+
+  .links {
+    position: fixed;
+    inset: 0 0 0 50%;
+    background: rgba(255, 255, 255, 0.98);
+    gap: 2.5rem;
+    padding: 5rem 2rem;
+    align-items: initial;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 250ms ease-out;
+  }
+
+  .links[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    background: url(/images/menu_black_24dp.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .nav-toggle[aria-expanded="true"] {
+    background: url(/images/close_black_24dp.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 2rem;
+    height: 2rem;
   }
 
   .moviecard {
-    width: 90%;
+    width: 70%;
+  }
+
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  .welcome-container {
+    height: 250px;
+  }
+
+  .featured-movies,
+  .recommended-movies,
+  .new-movies,
+  .top-rated-movies,
+  .coming-soon-movies {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
   }
 
   /* Movie Title Page */
-
   .movie-page,
   .title-info {
     display: flex;
@@ -458,162 +505,92 @@ button:disabled {
   }
 
   .play-movie {
-    width: 50%;
+    width: 60%;
   }
 
   .movie-details {
-    order: 3;
+    order: 2;
   }
 
   .about-info {
-    width: 60%;
-    order: 2;
-    margin: 20px 0px 20px 0px;
+    width: 100%;
+    order: 1;
   }
 
-  .rent {
-    margin-bottom: 30px;
+  /* Account Page */
+  .account-links ul {
+    display: flex;
+    flex-direction: column;
   }
 
-  @media (max-width: 820px) {
-    .main-nav {
-      display: block;
-    }
-
-    .moviecard {
-      width: 70%;
-    }
-
-    h2 {
-      text-align: center;
-    }
-
-    .links {
-      display: none;
-      padding: 0;
-    }
-
-    .links a {
-      font-size: 1.4rem;
-    }
-
-    .icon {
-      display: block;
-      border: none;
-      position: absolute;
-      width: 4em;
-      height: 4em;
-      top: 2rem;
-      right: 1rem;
-    }
-
-    .welcome-container {
-      height: 250px;
-    }
-
-    .featured-movies,
-    .recommended-movies,
-    .new-movies,
-    .top-rated-movies,
-    .coming-soon-movies {
-      grid-template-columns: repeat(2, 1fr);
-      justify-items: center;
-    }
-
-    /* Movie Title Page */
-    .movie-page,
-    .title-info {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .play-movie {
-      width: 60%;
-    }
-
-    .movie-details {
-      order: 2;
-    }
-
-    .about-info {
-      width: 100%;
-      order: 1;
-    }
-
-    /* Account Page */
-    .account-links ul {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .account-links li {
-      margin: 0px;
-    }
-
-    .account-page {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .account {
-      margin: 0px;
-    }
-
-    .account-links {
-      margin: 0px;
-    }
-
-    .folders {
-      margin: 0px;
-    }
+  .account-links li {
+    margin: 0px;
   }
 
-  @media screen and (max-width: 550px) {
-    main {
-      text-align: center;
-    }
+  .account-page {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .featured-movies,
-    .recommended-movies,
-    .new-movies,
-    .top-rated-movies,
-    .coming-soon-movies {
-      grid-template-columns: 1fr;
-      width: 70%;
-    }
+  .account {
+    margin: 0px;
+  }
 
-    .moviecard {
-      width: 100%;
-      margin-bottom: 2rem;
-    }
+  .account-links {
+    margin: 0px;
+  }
 
-    .play-movie {
-      width: 80%;
-    }
+  .folders {
+    margin: 0px;
+  }
+}
 
-    .welcome-container {
-      height: 150px;
-    }
+@media screen and (max-width: 550px) {
+  main h1,
+  main h2 {
+    text-align: center;
+  }
 
-    .rent .cta-yellow {
-      display: block;
-      margin-bottom: 20px;
-    }
+  .featured-movies,
+  .recommended-movies,
+  .new-movies,
+  .top-rated-movies,
+  .coming-soon-movies {
+    grid-template-columns: 1fr;
+    width: 70%;
+  }
 
-    .confirm {
-      max-width: 100%;
-    }
+  .moviecard {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 
-    .account {
-      flex-direction: column;
-    }
+  .play-movie {
+    width: 80%;
+  }
 
-    .account-info {
-      margin: 0px;
-    }
+  .welcome-container {
+    height: 150px;
+  }
 
-    .account img {
-      width: 50%;
-    }
+  .rent .cta-yellow {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .confirm {
+    max-width: 100%;
+  }
+
+  .account {
+    flex-direction: column;
+  }
+
+  .account-info {
+    margin: 0px;
+  }
+
+  .account img {
+    width: 50%;
   }
 }
