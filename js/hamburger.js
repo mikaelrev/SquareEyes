@@ -1,12 +1,14 @@
-const hamburgerMenu = document.querySelector('.icon');
+const links = document.querySelector('.links');
+const navToggle = document.querySelector('.nav-toggle');
 
-hamburgerMenu.addEventListener('click', () => {
-    var menu = document.querySelector('.links');
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    } 
-})
+navToggle.addEventListener('click', () => {
+    const visibility = links.getAttribute('data-visible');
 
-
+    if (visibility === "false") {
+        links.setAttribute('data-visible', true);
+        navToggle.setAttribute('aria-expanded', true);
+    } else if (visibility === "true") {
+        links.setAttribute('data-visible', false);
+        navToggle.setAttribute('aria-expanded', false);
+    }
+});
