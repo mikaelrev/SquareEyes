@@ -460,6 +460,7 @@ button:disabled {
     background: url(/images/menu_black_24dp.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    cursor: pointer;
     border: none;
     width: 2rem;
     height: 2rem;
@@ -469,10 +470,7 @@ button:disabled {
 
   .nav-toggle[aria-expanded="true"] {
     background: url(/images/close_black_24dp.svg);
-    background-repeat: no-repeat;
     background-size: cover;
-    width: 2rem;
-    height: 2rem;
   }
 
   .moviecard {
