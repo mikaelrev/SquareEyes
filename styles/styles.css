@@ -179,6 +179,28 @@ img {
   margin: 0 auto 5rem;
 }
 
+/* Movies Page */
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-left: 55%;
+  width: 30rem;
+}
+
+.search-button {
+  padding: 1em;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #f2a516;
+}
+
+.search-button:hover {
+  color: white;
+}
+
 /* Movie-Title Page */
 
 .title-info {
