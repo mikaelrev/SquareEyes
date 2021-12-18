@@ -1,68 +1,30 @@
-const newMoviesUrl = "https://squareeyes.flower-power.one/wp-json/wc/store/products?category=19";
-const topRatedUrl = "https://squareeyes.flower-power.one/wp-json/wc/store/products?category=17";
-const ComingSoonUrl = "https://squareeyes.flower-power.one/wp-json/wc/store/products?category=18"
-const comingSoonContainer = document.querySelector(".coming-soon-movies");
-const topRatedContainer = document.querySelector(".top-rated-movies");
-const newMoviesContainer = document.querySelector(".new-movies")
+const url = "https://squareeyes.flower-power.one/wp-json/wc/store/products?per_page=12";
+const moviesContainer = document.querySelector(".movies-container");
+const searchButton = document.querySelector(".search-button");
+const backButton = document.querySelector(".back-button");
 
 
-async function fetchNewMovies() {
+async function fetchMovies(url) {
     try {
-        const response = await fetch(newMoviesUrl);
+        const response = await fetch(url);
         const results = await response.json();
         const posters = results;
-        console.log(posters);
 
-        newMoviesContainer.innerHTML = "";
+        moviesContainer.innerHTML = "";
 
-        postersNewMovies(posters);
+        displayPosters(posters);
         }
         catch(error) {
         console.log(error);
     }
 }
 
-fetchNewMovies()
-
-async function fetchTopRated() {
-    try {
-        const response = await fetch(topRatedUrl);
-        const results = await response.json();
-        const posters = results;
-
-        topRatedContainer.innerHTML = "";
-
-        postersTopRated(posters);
-
-        }
-        catch(error) {
-    }
-}
-
-fetchTopRated();
-
-async function fetchComingSoon() {
-    try {
-        const response = await fetch(ComingSoonUrl);
-        const results = await response.json();
-        const posters = results;
-
-        comingSoonContainer.innerHTML = "";
-
-        postersComingSoon(posters);
-
-        }
-        catch(error) {
-    }
-}
-
-fetchComingSoon();
+fetchMovies(url)
 
 
-
-function postersNewMovies(posters) {
+function displayPosters(posters) {
         posters.forEach(function(poster) {
-        newMoviesContainer.innerHTML += 
+        moviesContainer.innerHTML += 
         `<div class="moviecard">
         <a href="movie-title.html?id=${poster.id}"><img src="${poster.images[0].src}">
         ${poster.name}</a>
@@ -70,22 +32,22 @@ function postersNewMovies(posters) {
     })
 }
 
-function postersTopRated(posters) {
-        posters.forEach(function(poster) {
-        topRatedContainer.innerHTML += 
-        `<div class="moviecard">
-        <a href="movie-title.html?id=${poster.id}"><img src="${poster.images[0].src}">
-        ${poster.name}</a>
-        </div>`;
-    })
+// searchButton.onclick = function() {
+//     const input = document.querySelector("#search-input").value;
+//     const newUrl = url + `&search=${input}`;
+//     moviesContainer.innerHTML += "";
+//     fetchMovies(newUrl);
+//     activateBackButton();
+// }
+
+function activateBackButton() {
+    backButton.style.display = "block";
 }
 
-function postersComingSoon(posters) {
-        posters.forEach(function(poster) {
-        comingSoonContainer.innerHTML += 
-        `<div class="moviecard">
-        <a href="movie-title.html?id=${poster.id}"><img src="${poster.images[0].src}">
-        ${poster.name}</a>
-        </div>`;
-    })
+backButton.onclick = function() {
+    fetchMovies(url);
+    backButton.style.display = "none";
 }
+
+
+

@@ -110,10 +110,7 @@ img {
 }
 
 .featured-movies,
-.recommended-movies,
-.new-movies,
-.top-rated-movies,
-.coming-soon-movies {
+.recommended-movies {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
@@ -172,10 +169,7 @@ img {
 }
 
 .featured-container,
-.recommended-container,
-.new-container,
-.top-rated-container,
-.coming-soon-container {
+.recommended-container {
   width: 90%;
   margin: 0 auto 5rem;
 }
@@ -185,12 +179,13 @@ img {
 .search {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  margin-left: 55%;
+  gap: 1rem;
+  margin: 0 auto 3rem;
   width: 30rem;
 }
 
-.search-button {
+.search-button,
+.back-button {
   padding: 1em;
   border: none;
   border-radius: 3px;
@@ -198,8 +193,22 @@ img {
   background-color: #f2a516;
 }
 
-.search-button:hover {
+.search-button:hover,
+.back-button:hover {
   color: white;
+}
+
+.back-button {
+  display: none;
+}
+
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+  width: 90%;
+  margin: auto;
 }
 
 /* Movie-Title Page */
@@ -460,6 +469,10 @@ button:disabled {
     width: 140px;
   }
 
+  .active {
+    text-underline-offset: 0.5rem;
+  }
+
   .links {
     position: fixed;
     inset: 0 0 0 50%;
@@ -509,11 +522,13 @@ button:disabled {
     height: 250px;
   }
 
+  .search {
+    width: 80%;
+    margin: auto;
+  }
+
   .featured-movies,
-  .recommended-movies,
-  .new-movies,
-  .top-rated-movies,
-  .coming-soon-movies {
+  .recommended-movies {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
   }
@@ -573,10 +588,7 @@ button:disabled {
   }
 
   .featured-movies,
-  .recommended-movies,
-  .new-movies,
-  .top-rated-movies,
-  .coming-soon-movies {
+  .recommended-movies {
     grid-template-columns: 1fr;
     width: 70%;
   }
