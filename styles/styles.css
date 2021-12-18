@@ -50,8 +50,8 @@ header {
 }
 
 .main-nav a {
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 
 .links {
@@ -100,7 +100,8 @@ a:hover {
 }
 
 .active {
-  color: #1d5982;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
 }
 
 img {
