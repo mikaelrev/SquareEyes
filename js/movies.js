@@ -32,13 +32,13 @@ function displayPosters(posters) {
     })
 }
 
-// searchButton.onclick = function() {
-//     const input = document.querySelector("#search-input").value;
-//     const newUrl = url + `&search=${input}`;
-//     moviesContainer.innerHTML += "";
-//     fetchMovies(newUrl);
-//     activateBackButton();
-// }
+searchButton.onclick = function() {
+    const input = document.querySelector("#search-input").value;
+    const newUrl = url + `&search=${input}`;
+    moviesContainer.innerHTML += "";
+    fetchMovies(newUrl);
+    activateBackButton();
+}
 
 function activateBackButton() {
     backButton.style.display = "block";
